@@ -27,6 +27,13 @@ jobs:
           repository: ${{ secrets.DOCKERHUB_USERNAME }}/k8s-argocd-demo
           tags: ${{ github.sha }}, latest
 
+      - name: Build and push image to DockerHub
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/k8s-argocd-demo:${{ github.sha }},${{ secrets.DOCKERHUB_USERNAME }}/k8s-argocd-demo:latest
+
       - name: Setup kustomize
         uses: imranismail/setup-kustomize@v1
         with:
