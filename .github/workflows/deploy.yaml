@@ -19,4 +19,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: ${{ secrets.DOCKERHUB_USERNAME }}/k8s-argocd-demo
-          tags: ${{github.sha}}, latest
+          tags: ${{ github.sha }}, latest
