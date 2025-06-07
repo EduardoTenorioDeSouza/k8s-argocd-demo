@@ -13,7 +13,6 @@ spec:
     spec:
       containers:
       - name: goserver
-        image: esouza/k8s-argocd-demo:latest
+        image: goserver
         ports:
         - containerPort: 9090
-
