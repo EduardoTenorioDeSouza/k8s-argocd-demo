@@ -38,9 +38,9 @@ jobs:
           git config --local user.name "GitHub Action"
           git commit -am "Bump docker version"
 
-      - name: push
+      - name: Commit e push
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secret.GITHUB_TOKEN }}
-          repository: EduardoTenorioDeSouza/k8s-argocd-demo
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
 
