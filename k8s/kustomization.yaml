@@ -8,4 +8,4 @@ resources:
 images:
 - name: goserver
   newName: esouza/k8s-argocd-demo
-  newTag: 0aad9844798cf643919db969da38562262cb5364
+  newTag: b95f7caa776dd55c74a5516a4fa76d27162ab0f2
